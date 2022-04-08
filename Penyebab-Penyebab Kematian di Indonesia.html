@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Penyebab-Penyebab Kematian di Indonesia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .chartMenu {
+            width: 100vw;
+            height: 40px;
+            background: white;
+            color : rgba(255, 26, 104, 1);
+        }
+        .chartMenu p {
+            padding: 10px;
+            font-size: 20px;
+        }
+        .chartCard {
+            width: 100vw;
+            height: calc(100vh - 40px);
+            background: rgba(255, 26, 104, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chartBox {
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            border: solid 3px rgba(255, 26, 104, 1);
+            background: white;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="chartMenu">
+        <p>Deta Eka Prameswari (06311940000074)</p>
+        </div>
+        <div class="chartCard">
+            <div class="chartBox">
+                <h1 style="text-align: center; color: black;">Kasus-Kasus Penyebab Kematian di Indonesia</h1>
+                <hr>
+        <canvas id="myChart"></canvas>
+    </div>
+    </div>
+
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+    var ctx = document.getElementById('myChart');
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["Covid-19", "Cardiovascular Diseases", "Respiratory Diseases", "Neoplasms", "Diabetes"],
+            datasets: [{
+                label: "My Firs dataset",
+                data: [0, 22.329, 651.481, 100.930, 229.524, 106.333],
+                backgroundColor: [ 
+                    "#FF6384",
+                    "#8463FF",
+                    "#F1C40F",
+                    "#63FF84",
+                    "#AEB6BF",
+                ],
+                borderColor: [
+                    "#FF6384",
+                    "#8463FF",
+                    "#F1C40F",
+                    "#63FF84",
+                    "#AEB6BF", 
+                ],
+                borderWidth: 1,
+                hoverOffset: 25
+            }],
+        },
+    options: {
+        layout: {
+            padding: {
+                bottom: 15
+            }
+        }
+        }
+    });
+    </script>
+
+  </body>
+
+</html>
